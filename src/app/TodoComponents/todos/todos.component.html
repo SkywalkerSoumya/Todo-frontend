@@ -1,0 +1,53 @@
+
+<h4>Task View</h4>
+<!-- <div *ngFor = "let x of todos">
+    total task : {{count()}}
+</div> -->
+<div class="overflow-auto">
+<table class = "table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <!-- <th>Id</th> -->
+            <th>Tasks</th>
+            <th>Status</th>
+            <th>DueDate</th>
+            <th>Action </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor = "let x of todos">
+            <!-- <td>{{x.id}}</td> -->
+            <td>
+                <div *ngIf="x.chk==true" class="task-done"> {{x.task}}</div>
+                <div *ngIf="x.chk==false" class="task-undone"> {{x.task}}</div>
+            </td>
+            <td > <!-- {{x.chk}} -->
+                <div *ngIf="x.chk==true" class="form-check">
+                    <i class="fa-solid fa-check" value="" id="flexCheckChecked"></i>
+                    <!-- <label class="form-check-label" for="flexCheckChecked"> -->
+                        <!--Done-->
+                    <!-- </label> -->
+                  </div>
+                  <div *ngIf="x.chk==false" class="form-check">
+                    <!-- <input type="text" value="" id="flexCheckDefault"> -->
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Pending...
+                     </label>
+                  </div>
+            </td>
+            <td>
+                <div>
+                    {{x.date}}
+                </div>
+            </td>
+            <td>
+                <!-- <button (click)="updateTask(x.id)" class="btn btn-success">UPDATE</button> -->
+                <i (click)="updateTask(x.id)" style="padding-left:5px;" class="fa-sharp fa-solid fa-pen-to-square"></i>
+
+                <i (click)="deleteTask(x.id)" style="padding-left:15px;" class="fa-sharp fa-solid fa-trash"></i>
+            </td>
+        </tr> 
+    </tbody>
+</table>
+</div>

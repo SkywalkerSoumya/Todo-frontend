@@ -1,0 +1,28 @@
+/* .form-check{
+    padding-left: 10px;
+} */
+
+.fa-trash{
+    color: red;
+}
+
+.fa-pen-to-square{
+    color:blue
+}
+
+.fa-check{
+    color: rgb(25, 166, 29);
+}
+
+.task-done{
+    color: green;
+}
+.task-undone{
+    color: brown;
+}
+
+.overflow-auto{
+    height: 370px;
+    overflow-y: auto;
+}
+  
